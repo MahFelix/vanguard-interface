@@ -9,7 +9,7 @@ const Section = styled.section`
   justify-content: space-between;
   background: url(${BGDIREITOS}) no-repeat center center/cover;
   color: white;
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
   position: relative;
 
   @media (max-width: 768px) {

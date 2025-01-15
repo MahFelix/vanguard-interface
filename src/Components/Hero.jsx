@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BGDESKTOP from '../assets/AD1.webp'
+import BGMOBILE from '../assets/BGMOBILE-ADV.webp'
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -7,13 +8,14 @@ const HeroSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 10px;
   background: url(${BGDESKTOP}) no-repeat center center/cover;
   color: white;
 
 
   h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: #000000;
     text-align: center;
     width: 40%;
@@ -23,10 +25,11 @@ const HeroSection = styled.section`
   p {
     color: #000000;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
     text-align: center;
     width:40%;
     max-width: 700px; /* Limitar a largura máxima */
-    margin-bottom: 1rem;
+   
   }
 
   button {
@@ -48,17 +51,25 @@ const HeroSection = styled.section`
 
   /* Responsividade para telas menores */
   @media (max-width: 768px) {
+    background: url(${BGMOBILE}) no-repeat center center/cover;
+    justify-content: center;
+    align-items: flex-start;
+
     h1 {
+      margin-left: 20px;
       font-size: 2.5rem; /* Ajuste no tamanho da fonte */
     
     }
 
     p {
+      width: 200px;
+      margin-left: 20px;
       font-size: 1.5rem; /* Ajuste no tamanho da fonte */
     }
 
     button {
-      width: 60%; /* Aumentar o tamanho do botão em telas menores */
+      align-self: flex-start;
+      width: 40%; /* Aumentar o tamanho do botão em telas menores */
     }
   }
 
