@@ -24,6 +24,7 @@ const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
   background: #0d1117;
   padding: 1rem 2rem;
   color: white;
@@ -42,34 +43,65 @@ const NavbarContainer = styled.nav`
   }
 
   @media (max-width: 768px) {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: #0d1117d8;
+    
     .menu-links {
-      display: none; /* Esconde os links na versão mobile */
+      display: none;
     }
 
     .hamburger {
-      display: block; /* Exibe o ícone de hambúrguer */
+      display: block;
       cursor: pointer;
-      z-index: 10; /* Certifica-se de que o hambúrguer está acima de outros elementos */
     }
   }
+`;
+
+const Logo = styled.img`
+  width: 40px;
 `;
 
 const MenuLinks = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 
+
+  a {
+    border: 1px solid white;
+    padding: 16px;
+  }
+  
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #0d1117;
-    height: 100vh;
+    top: 90px;
+    right: -25px;
+
+    height: 20vh;
     width: 200px;
+    gap: 10px;
     justify-content: center;
+    align-items: center;
     padding: 2rem;
-    transform: translateX(100%);
+    transform: translateX(${props => (props.isOpen ? '0' : '100%')});
     animation: ${props => (props.isOpen ? slideIn : slideOut)} 0.3s forwards;
+
+
+    a { 
+      display: flex;
+      gap: 10px;
+      width: 150px;
+     height: 200px;
+     padding: 8px;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d1117c5;
+    
+    }
+    
   }
 `;
 
@@ -113,18 +145,19 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <div>Vanguard Advocacia</div>
-      <Hamburger className="hamburger" onClick={toggleMenu}>
-        <div style={{ transform: isOpen ? 'rotate(45deg) translateY(8px)' : 'rotate(0)' }} />
+      <Logo src="/ADVICON.svg" alt="Logo-icon" />
+      <div>VANGUARD ADVOCACIA</div>
+      <Hamburger onClick={toggleMenu}>
+        <div style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0)' }} />
         <div style={{ opacity: isOpen ? 0 : 1 }} />
-        <div style={{ transform: isOpen ? 'rotate(-45deg) translateY(-8px)' : 'rotate(0)' }} />
+        <div style={{ transform: isOpen ? 'rotate(-45deg)' : 'rotate(0)' }} />
       </Hamburger>
-      <MenuLinks className="menu-links" isOpen={isOpen}>
-      <Link to="hero" smooth={true} duration={500} onClick={toggleMenu} href='hero'>Início</Link>
-        <Link to="about" smooth={true} duration={500} onClick={toggleMenu} href='about'>Sobre Nós</Link>
-        <Link to="artigos" smooth={true} duration={500} onClick={toggleMenu} href='artigos'>Artigos</Link>
-        <Link to="areas" smooth={true} duration={500} onClick={toggleMenu} href='areas'>Área de Atuação</Link>
-        <Link to="contact" smooth={true} duration={500} onClick={toggleMenu} href='contact'>Contato</Link>
+      <MenuLinks isOpen={isOpen}>
+        <Link to="hero" smooth={true} duration={500} onClick={toggleMenu}>Início</Link>
+        <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>Sobre Nós</Link>
+        <Link to="artigos" smooth={true} duration={500} onClick={toggleMenu}>Artigos</Link>
+        <Link to="areas" smooth={true} duration={500} onClick={toggleMenu}> Atuação</Link>
+        <Link to="contact" smooth={true} duration={500} onClick={toggleMenu}>Contato</Link>
       </MenuLinks>
     </NavbarContainer>
   );
