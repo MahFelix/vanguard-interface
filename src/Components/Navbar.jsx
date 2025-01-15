@@ -77,7 +77,7 @@ const MenuLinks = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    top: 95px;
+    top: 98px;
     right: -25px;
 
     height: 20vh;
