@@ -105,12 +105,19 @@ const MessageInput = styled.textarea`
   }
 `;
 
+const SelectLabel = styled.label`
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  display: block; /* Certifica-se de que o label seja exibido corretamente */
+`;
+
 const SubmitButton = styled.button`
   padding: 0.8rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
-  background-color: #283040;
+  background-color: #214285;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
@@ -135,21 +142,28 @@ const ContactForm = () => {
       </Subtitle>
       <Form>
         <InputGroup>
+        <SelectLabel>Nome:</SelectLabel>
           <Input type="text" placeholder="Nome*" required />
+          <SelectLabel htmlFor="area-de-direito">Tel:</SelectLabel>
           <Input type="tel" placeholder="Telefone*" required />
         </InputGroup>
         <InputGroup>
+        <SelectLabel htmlFor="area-de-direito">Email:</SelectLabel>
           <Input type="email" placeholder="Email*" required />
-          <Select required>
-            <option value="">Selecione uma área de direito</option>
-            <option value="previdenciario">Direito Previdenciário</option>
-            <option value="trabalhista">Direito Trabalhista</option>
-            <option value="civil">Direito Civil</option>
-            <option value="penal">Direito Penal</option>
-            <option value="familia">Direito de Família</option>
-            <option value="tributario">Direito Tributário</option>
-          </Select>
+          <div>
+            <SelectLabel htmlFor="area-de-direito">Selecione uma área de direito</SelectLabel>
+            <Select id="area-de-direito" required>
+              <option value="">Selecione uma área de direito</option>
+              <option value="previdenciario">Direito Previdenciário</option>
+              <option value="trabalhista">Direito Trabalhista</option>
+              <option value="civil">Direito Civil</option>
+              <option value="penal">Direito Penal</option>
+              <option value="familia">Direito de Família</option>
+              <option value="tributario">Direito Tributário</option>
+            </Select>
+          </div>
         </InputGroup>
+        <SelectLabel htmlFor="area-de-direito">Digite sua mensagem aqui</SelectLabel>
         <MessageInput placeholder="Mensagem*" required />
         <SubmitButton type="submit">Enviar</SubmitButton>
       </Form>

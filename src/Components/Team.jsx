@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { FaGavel, FaBalanceScale, FaRegHandshake, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import DRA from '../assets/Doutor3.png'; // Substitua por mais imagens conforme necessário
+import DRA from '../assets/Doutor3.webp'; // Substitua por mais imagens conforme necessário
 import { useState } from "react";
-import DR1 from '../assets/Doutor1.png';
-import DR2 from '../assets/Doutor2.png';
+import DR1 from '../assets/Doutor1.webp';
+import DR2 from '../assets/Doutor2.webp';
 
 
 const TeamSection = styled.section`

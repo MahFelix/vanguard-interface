@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BGDESKTOP from '../assets/AD1.jpg'
+import BGDESKTOP from '../assets/AD1.webp'
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -30,7 +30,7 @@ const HeroSection = styled.section`
   }
 
   button {
-    background: #283040;
+    background: #214285;
     color: #fff;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -81,7 +81,7 @@ const Hero = () => (
   <HeroSection>
     <h1>VANGUARD ADVOCACIA</h1>
     <p>Comprometidos com a justiça e dedicados a você!</p>
-    <button>Agendar Consulta</button>
+    <button>AGENDAR CONSULTA</button>
   </HeroSection>
 );
 

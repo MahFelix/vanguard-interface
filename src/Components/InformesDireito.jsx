@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ESTATUA from '../assets/estatua.png'
-import BGDIREITOS from '../assets/ADV3.png'
+import BGDIREITOS from '../assets/ADV3.webp'
 
 const Section = styled.section`
   display: flex;
@@ -72,7 +72,7 @@ const Content = styled.div`
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;
-    background-color: #283040;
+    background-color: #214285;
     color: white;
     border-radius: 4px;
     cursor: pointer;
