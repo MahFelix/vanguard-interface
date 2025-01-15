@@ -206,7 +206,7 @@ const Team = () => {
   };
 
   return (
-    <TeamSection>
+    <TeamSection id="areas">
       <h2>CONHEÇA NOSSOS ADVOGADOS</h2>
 
       {/* Cards de Sobreposição */}

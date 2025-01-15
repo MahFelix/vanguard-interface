@@ -120,9 +120,9 @@ const Navbar = () => {
         <div style={{ transform: isOpen ? 'rotate(-45deg) translateY(-8px)' : 'rotate(0)' }} />
       </Hamburger>
       <MenuLinks className="menu-links" isOpen={isOpen}>
-      <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>Início</Link>
+      <Link to="hero" smooth={true} duration={500} onClick={toggleMenu}>Início</Link>
         <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>Sobre Nós</Link>
-        <Link to="about" smooth={true} duration={500} onClick={toggleMenu}>Artigos</Link>
+        <Link to="artigos" smooth={true} duration={500} onClick={toggleMenu}>Artigos</Link>
         <Link to="areas" smooth={true} duration={500} onClick={toggleMenu}>Área de Atuação</Link>
         <Link to="contact" smooth={true} duration={500} onClick={toggleMenu}>Contato</Link>
       </MenuLinks>

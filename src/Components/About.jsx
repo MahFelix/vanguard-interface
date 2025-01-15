@@ -63,7 +63,7 @@ const TextContent = styled.div`
 `;
 
 const Info = () => (
-  <InfoSection>
+  <InfoSection id='about'>
     <ImageWrapper>
       <img src={LOGO} alt="Logo Vanguard Advocacia" />
     </ImageWrapper>

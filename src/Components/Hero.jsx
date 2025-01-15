@@ -78,7 +78,7 @@ const HeroSection = styled.section`
 `;
 
 const Hero = () => (
-  <HeroSection>
+  <HeroSection id='hero'>
     <h1>VANGUARD ADVOCACIA</h1>
     <p>Comprometidos com a justiça e dedicados a você!</p>
     <button>AGENDAR CONSULTA</button>

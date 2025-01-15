@@ -134,7 +134,7 @@ const SubmitButton = styled.button`
 
 const ContactForm = () => {
   return (
-    <FormSection>
+    <FormSection id="contact">
       <Title>ENTRE EM CONTATO</Title>
       <Subtitle>
         A lei é complicada e pode lhe causar um grande problema! Deixe-nos

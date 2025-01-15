@@ -95,7 +95,7 @@ const Content = styled.div`
 
 const ImageAndTextSection = () => {
   return (
-    <Section>
+    <Section id="artigos">
       <ImageWrapper>
         <img src={ESTATUA} alt="Imagem descritiva" />
       </ImageWrapper>
