@@ -9,7 +9,7 @@ const Section = styled.section`
   justify-content: space-between;
   background: url(${BGDIREITOS}) no-repeat center center/cover;
   color: white;
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
   position: relative;
 
   @media (max-width: 768px) {
@@ -22,46 +22,45 @@ const Section = styled.section`
 
 const ImageWrapper = styled.div`
   position: absolute;
-  top: -63px; /* Ajuste para sobrepor a seção superior */
-  left: 0;
-  width: 50%;
+  top: -4rem; /* Mantém a sobreposição em telas maiores */
+  left: 10rem; /* Ajuste para alinhar com a seção */
+  width: 40%;
   max-width: 430px;
 
   img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-left: 200px;
   }
 
   @media (max-width: 768px) {
-    position: static;
-    width: 80%;
-    margin-bottom: 1.5rem;
-
+    position: relative; /* Permite que a imagem seja reposicionada */
+    top: 0; /* Remove sobreposição */
+    left: 0; /* Centraliza na seção */
+    width: 80%; /* Ajuste o tamanho para telas menores */
+    max-width: none; /* Remove limite de largura */
+    margin: 0 auto 1.5rem; /* Centraliza e dá espaçamento inferior */
+    
     img {
-        display: none;
+      display: none;
     }
   }
 `;
 
 const Content = styled.div`
-  width: 40%;
-  padding-left: 2rem;
+  width: 40%; /* Faz o texto ocupar mais espaço */
+  margin-right: 19rem;
   display: flex;
   flex-direction: column;
-  margin-left: 750px;
-
+  margin-left: auto; /* Mantém o texto alinhado à direita */
 
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #000000;
-    
   }
 
   p {
-    width: 100%;
     font-size: 1.3rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
@@ -69,6 +68,8 @@ const Content = styled.div`
   }
 
   button {
+    display: flex;
+    justify-content: center;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;
@@ -78,6 +79,7 @@ const Content = styled.div`
     cursor: pointer;
     transition: background-color 0.3s;
     width: 200px;
+    align-items: center;
 
     &:hover {
       background-color: #d98204;
@@ -85,13 +87,18 @@ const Content = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: flex;
-    margin-left:-27px;
-    width: 100%;
-    align-items: center
+    width: 100%; /* Expande para usar todo o espaço */
+    text-align: center; /* Centraliza o conteúdo no mobile */
    
+
+    button {
+      display: flex;
+      align-items: center;
+      width:350px;
+    }
   }
 `;
+
 
 const ImageAndTextSection = () => {
   return (
