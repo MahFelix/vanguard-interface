@@ -89,12 +89,15 @@ const Content = styled.div`
   @media (max-width: 768px) {
     width: 100%; /* Expande para usar todo o espaço */
     text-align: center; /* Centraliza o conteúdo no mobile */
+    display: flex;
+    justify-content: center;
    
 
     button {
       display: flex;
       align-items: center;
-      width:350px;
+      justify-content: center;
+      width: 100%;
     }
   }
 `;
