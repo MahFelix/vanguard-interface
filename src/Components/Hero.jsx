@@ -53,23 +53,20 @@ const HeroSection = styled.section`
   @media (max-width: 768px) {
     background: url(${BGMOBILE}) no-repeat center center/cover;
     justify-content: center;
-    align-items: flex-start;
+   
 
     h1 {
-      margin-left: 20px;
       font-size: 2.5rem; /* Ajuste no tamanho da fonte */
     
     }
 
     p {
       width: 200px;
-      margin-left: 20px;
       font-size: 1.5rem; /* Ajuste no tamanho da fonte */
     }
 
     button {
-      align-self: flex-start;
-      width: 40%; /* Aumentar o tamanho do botão em telas menores */
+      width: 50%; /* Aumentar o tamanho do botão em telas menores */
     }
   }
 
