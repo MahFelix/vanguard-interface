@@ -15,7 +15,10 @@ const InfoSection = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center; /* Centraliza o texto em telas menores */
-    gap: 1rem; /* Diminui o espaço entre elementos */
+    gap: 2rem; /* Diminui o espaço entre elementos */
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 `;
 

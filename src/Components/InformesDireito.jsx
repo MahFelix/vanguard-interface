@@ -15,7 +15,8 @@ const Section = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
+    
   }
 `;
 
@@ -85,7 +86,7 @@ const Content = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    margin-left:0;
+    margin-left:-27px;
     width: 100%;
     align-items: center
    

@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { FaGavel, FaBalanceScale, FaRegHandshake, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import DRA from '../assets/Dra.png'; // Substitua por mais imagens conforme necessário
+import DRA from '../assets/Doutor3.png'; // Substitua por mais imagens conforme necessário
 import { useState } from "react";
+import DR1 from '../assets/Doutor1.png';
+import DR2 from '../assets/Doutor2.png';
+
 
 const TeamSection = styled.section`
   background-color: #1c1f26;
@@ -17,7 +20,7 @@ const TeamSection = styled.section`
   }
 
   @media (max-width: 768px) {
-    padding: 6rem 1rem 2rem;
+    padding: 3rem 1rem 4rem;
     h2 {
       font-size: 1.5rem;
     }
@@ -141,10 +144,11 @@ const ProfileCard = styled.div`
     flex-direction: column;
     text-align: center;
     height: auto;
+padding: 24px ;
 
     img {
-      width: 250px;
-      height: 200px;
+      width: 270px;
+      height: 250px;
       margin-right: 0;
       margin-bottom: 1rem;
     }
@@ -178,13 +182,13 @@ const Team = () => {
       name: "Dr. João Silva",
       description:
         "Focado em Direito Penal, com uma abordagem inovadora e estratégica.",
-      image: DRA, // Substitua por outra imagem
+      image: DR1, // Substitua por outra imagem
     },
     {
       name: "Dra. Camila Oliveira",
       description:
         "Atuação em Direito Trabalhista, sempre buscando justiça para seus clientes.",
-      image: DRA, // Substitua por outra imagem
+      image: DR2, // Substitua por outra imagem
     },
   ];
 
