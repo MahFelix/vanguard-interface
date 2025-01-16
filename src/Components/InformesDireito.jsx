@@ -9,47 +9,55 @@ const Section = styled.section`
   justify-content: space-between;
   background: url(${BGDIREITOS}) no-repeat center center/cover;
   color: white;
-  padding: 8rem 2rem;
   position: relative;
+ 
 
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
     padding: 3rem 2rem;
-    
   }
 `;
 
 const ImageWrapper = styled.div`
-  position: absolute;
-  top: -4rem; /* Mantém a sobreposição em telas maiores */
-  left: 10rem; /* Ajuste para alinhar com a seção */
+  position: relative; /* Permite que a posição dependa do fluxo do layout */
   width: 40%;
   max-width: 430px;
-
+  margin-right: auto; /* Garante espaçamento natural à direita */
+  margin-left: 190px;
+  margin-bottom: -5px;
+  margin-top: -50px;
+  
   img {
     width: 100%;
     height: auto;
     border-radius: 8px;
   }
 
-  @media (max-width: 768px) {
-    position: relative; /* Permite que a imagem seja reposicionada */
-    top: 0; /* Remove sobreposição */
-    left: 0; /* Centraliza na seção */
-    width: 80%; /* Ajuste o tamanho para telas menores */
-    max-width: none; /* Remove limite de largura */
-    margin: 0 auto 1.5rem; /* Centraliza e dá espaçamento inferior */
-    
+  @media (max-width: 1237px) {
+    width: 80%; /* Ajusta o tamanho da imagem para telas menores */
+    max-width: none; /* Remove limite fixo */
+    margin: 0 auto 1.5rem; /* Centraliza a imagem e dá espaçamento inferior */
+
     img {
       display: none;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 80%; /* Ajusta o tamanho da imagem para telas menores */
+    max-width: none; /* Remove limite fixo */
+    margin: 0 auto 1.5rem; /* Centraliza a imagem e dá espaçamento inferior */
+  }
 `;
+
+
+
+
 
 const Content = styled.div`
   width: 40%; /* Faz o texto ocupar mais espaço */
-  margin-right: 19rem;
+  margin-right: 21rem;
   display: flex;
   flex-direction: column;
   margin-left: auto; /* Mantém o texto alinhado à direita */
