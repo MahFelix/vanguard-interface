@@ -27,7 +27,7 @@ const HeroSection = styled.section`
     font-size: 2rem;
     margin-bottom: 0.5rem;
     text-align: center;
-    width:40%;
+    width:30%;
     max-width: 700px; /* Limitar a largura máxima */
    
   }
