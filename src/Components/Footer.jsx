@@ -47,24 +47,6 @@ const ContactItem = styled.p`
   margin-bottom: 10px;
 `;
 
-const SocialLinks = styled.div`
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-
-  @media (max-width: 768px) {
-    gap: 10px;
-  }
-`;
-
-const SocialLink = styled.a`
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  &:hover {
-    color: #F29F05;
-  }
-`;
 
 const Footer = () => {
   return (
@@ -87,11 +69,6 @@ const Footer = () => {
           <ContactItem>São Paulo, SP</ContactItem>
         </Column>
       </FooterContent>
-      <SocialLinks>
-        <SocialLink href="https://www.facebook.com" target="_blank">Facebook</SocialLink>
-        <SocialLink href="https://www.linkedin.com" target="_blank">LinkedIn</SocialLink>
-        <SocialLink href="https://www.instagram.com" target="_blank">Instagram</SocialLink>
-      </SocialLinks>
     </FooterContainer>
   );
 };
